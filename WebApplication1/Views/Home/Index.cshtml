@@ -70,21 +70,24 @@
                     <th>類別</th>
                     <th>日期</th>
                     <th>金額</th>
+                    <th>備註</th>
                 </tr>
-               @{ int i = 1;
-                   foreach (var item in Model)
-                   {
+                @{ int i = 0;
+                    foreach (var item in Model)
+                    {
 
-                       i += 1;
-                    <tr>
-                        <td>@i</td>
-                        <td>@item.Type</td>
-                        <td>@item.Date</td>
-                        <td>@item.Money</td>
+                        i += 1;
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.Type</td>
+                            <td>@item.Date</td>
+                            <td>@item.Money</td>
+                            <td>@item.Other</td>
                     </tr>
-                   }
-            }
+                    }
+                }
             </table>
         </div>
     </div>
+</div>
 
